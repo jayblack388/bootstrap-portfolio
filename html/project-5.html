@@ -5,7 +5,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>About Me</title>
+	<title>Rock, Paper, Scissors</title>
 	<!-- CSS Reset and Bootstrap 4.0 CDN -->
 	<link rel="stylesheet" type="text/css" href="../assets/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -84,7 +84,71 @@
 		</footer>
 	</div>	
 
-
+	<script type="text/javascript">
+		const getUserChoice = userInput =>{
+		  userInput = userInput.toLowerCase();
+		  if (userInput === 'rock'|| userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
+		    return userInput
+		  }
+		  else {
+		    console.log ('Did not pick rock, paper, or scissors');
+		  }
+		}
+		const getComputerChoice = () =>{
+		 let randomNumber = Math.floor(Math.random() * 3);
+		  switch (randomNumber){
+		    case 0:
+		      return 'rock';
+		      break;
+		    case 1:
+		      return 'paper';
+		      break;
+		    case 2:
+		      return 'scissors';
+		      break;
+		  }
+		};
+		const determineWinner = (userChoice,computerChoice) => {
+		  if (userChoice === 'bomb'){
+		    return 'Kaboom!!!! Player wins and breaks the game!!!'
+		  }
+		  if (userChoice === computerChoice){
+		      return 'The game was a tie!'
+		  }
+		  if (userChoice === 'rock'){
+		    if (computerChoice === 'scissors'){
+		      return 'You Win!'
+		    }
+		    else {
+		      return 'The Computer Wins!'
+		    }
+		  }
+		  if (userChoice === 'paper'){
+		    if (computerChoice === 'rock'){
+		      return 'You Win!'
+		    }
+		    else {
+		      return 'The Computer Wins!'
+		    }
+		  }
+		  if (userChoice === 'scissors'){
+		    if (computerChoice === 'paper'){
+		      return 'You Win!'
+		    }
+		    else {
+		      return 'The Computer Wins!'
+		    }
+		  }
+		}
+		const playGame = () =>{
+		  let userChoice = getUserChoice(prompt('Rock, Paper, or Scissors?'));
+		  alert('The player picks ' + userChoice + '.');
+		  let computerChoice = getComputerChoice();
+		  alert('The computer picks ' + computerChoice +'.');
+		  alert(determineWinner(userChoice,computerChoice))
+		}
+		playGame()
+	</script>
 	<!-- Bootstrap jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<!-- Popper.js (for Bootstrap) -->
