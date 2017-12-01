@@ -10,10 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="../assets/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/triviastyle.css">
 </head>
 <body>
 
-<!-- 	Navbar -->
+    <!-- 	Navbar -->
 	<div class="container">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
 
@@ -76,8 +77,19 @@
 
 		</nav>
 	</div>
-	
-
+	<div class="container">
+      <div class="jumbotron bg-secondary text-center quizContainer">
+         <h1 class="text-dark">A Song of Ice and Fire Quiz</h1>
+        <div class="timeLeft text-danger"></div>
+        <div class="question"></div>
+        <ul class="choiceList"></ul>
+        <div class="quizMessage"></div>
+        <div class="result"></div>
+        <button type="button" class="nextButton btn btn-primary">Next Question</button>
+        <br>
+      </div>
+    </div>  
+	<!-- Footer -->
 	<div class="container-fluid bg-secondary text-center" style="padding:20px">
 		<footer class="footer">
 			<span class="text-light text-weight-bold">John Blackwell &#169 2017</span>
@@ -91,5 +103,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<!-- Javascript plugins (for Bootstrap) -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="../assets/javascript/trivia.js"></script>  
 </body>
 </html>

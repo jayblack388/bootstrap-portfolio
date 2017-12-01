@@ -5,15 +5,15 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>About Me</title>
+	<title>Font Previewer</title>
 	<!-- CSS Reset and Bootstrap 4.0 CDN -->
 	<link rel="stylesheet" type="text/css" href="../assets/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/typestyles.css">
 </head>
 <body>
 
-<!-- 	Navbar -->
+	<!-- 	Navbar -->
 	<div class="container">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
 
@@ -76,8 +76,49 @@
 
 		</nav>
 	</div>
+	<div class = "container">
+	  <header>
+	    <h1>Font Previewer</h1>
+	    <h2>Try out various fonts and sizes</h2>
+	  </header>
+	  <div class="formHolder">
+	    <form method="POST">
+			<div class="row">
+		      <div class="col">
+		        Font Family <select name="font" id="font">
+		          <option value="helvetica" id="helvetica">Helvetica</option>
+		          <option value="times" id="times">Times</option>
+		          <option value="impact" id="impact">Impact</option>
+		          <option value="courier" id="courier">Courier</option>
+		          <option value="verdana" id="verdana">Verdana</option>
+		          <option value="georgia" id="georgia">Georgia</option>
+		          <option value="cursive" id="cursive">Comic Sans MS</option>
+		        </select>
+		      </div>
+		      <div class="col">
+		        Font Size  <input type="text" placeholder="12" id="size">
+		      </div>
+		      <div class="col">
+		        Font Weight  <select name="weight" id="weight">
+		         <option value="normal">Normal</option>
+		         <option value="bold">Bold</option>
+		       </select>
+		      </div>
+		      <div class="col">
+		        Font Style  <select name="style" id="style">
+		         <option value="normal">Normal</option>
+		         <option value="bold">Bold</option>
+		       </select>
+		      </div>
+		    </div>  
+	    </form>
+	  </div>
+	  <div class="preview text-center">Sample Font</div>
+	  <textarea name="text" placeholder="Type something here and see what happens..." id="text" cols="30" rows="10"></textarea>
+	</div>
 
 
+	<!-- Footer -->
 	<div class="container-fluid bg-secondary text-center" style="padding:20px">
 		<footer class="footer">
 			<span class="text-light text-weight-bold">John Blackwell &#169 2017</span>
@@ -91,5 +132,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<!-- Javascript plugins (for Bootstrap) -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="../assets/javascript/typemain.js"></script>
 </body>
 </html>
