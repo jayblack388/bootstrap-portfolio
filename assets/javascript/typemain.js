@@ -5,6 +5,12 @@ $(document).ready(() => {
   $('#font').on('change', (event) => {
     $('.preview').css('font-family', $(event.currentTarget).val());
   });
+  $('#lines').on('change', (event) => {
+    $('.preview').css('text-decoration', $(event.currentTarget).val());
+  });
+  $('#line-style').on('change', (event) => {
+    $('.preview').css('text-decoration-style', $(event.currentTarget).val());
+  });
   $("#weight").change(function(){
     if($(this).is(":checked")){
         $('.preview').addClass("bold"); 
@@ -30,4 +36,7 @@ $(document).ready(() => {
     let fontSize = $(event.currentTarget).val() +'px';
     $('.preview').css('font-size', fontSize);
   });
+  if($("#lines").attr('text-decoration') !== "initial"){
+    $("#lines").removeClass('hidden-stuff')
+  }
 });
