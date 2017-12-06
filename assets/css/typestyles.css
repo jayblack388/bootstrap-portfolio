@@ -64,13 +64,20 @@ textarea {
   margin: 40px auto 0 auto;
   padding: 20px;
   text-transform: uppercase;
-  height: 50px;
+  height: 100px;
 }
 
 .form {
   display: inline;
 }
 
-input {
-  display: inline;
+
+.italics {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold
+}
+.variant{
+  font-variant: small-caps;
 }

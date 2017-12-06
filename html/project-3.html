@@ -79,13 +79,14 @@
 	<div class = "container">
 	  <header>
 	    <h1>Font Previewer</h1>
-	    <h2>Try out various fonts and sizes</h2>
+	    <h2>Try out various fonts, styles, and sizes</h2>
 	  </header>
 	  <div class="formHolder">
 	    <form method="POST">
 			<div class="row">
 		      <div class="col">
-		        Font Family <select name="font" id="font">
+		        Font Family
+		        <select name="font" id="font">
 		          <option value="helvetica" id="helvetica">Helvetica</option>
 		          <option value="times" id="times">Times</option>
 		          <option value="impact" id="impact">Impact</option>
@@ -96,19 +97,20 @@
 		        </select>
 		      </div>
 		      <div class="col">
-		        Font Size  <input type="text" placeholder="12" id="size">
+		        Font Size  
+		        <input type="text" placeholder="12" id="size">
 		      </div>
 		      <div class="col">
-		        Font Weight  <select name="weight" id="weight">
-		         <option value="normal">Normal</option>
-		         <option value="bold">Bold</option>
-		       </select>
+		        Bold <br>
+		        <input type="checkbox" name="weight" id="weight">
 		      </div>
 		      <div class="col">
-		        Font Style  <select name="style" id="style">
-		         <option value="normal">Normal</option>
-		         <option value="bold">Bold</option>
-		       </select>
+		        Italic <br>
+		        <input type="checkbox" name="style" id="style">
+		      </div>
+		      <div class="col">
+		        Small Caps  <br>
+		        <input type="checkbox" name="variant" id="variant">
 		      </div>
 		    </div>  
 	    </form>
