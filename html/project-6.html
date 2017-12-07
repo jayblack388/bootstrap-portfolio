@@ -5,91 +5,150 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>About Me</title>
-	<!-- CSS Reset and Bootstrap 4.0 CDN -->
-	<link rel="stylesheet" type="text/css" href="../assets/reset.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<title>Giphy API Project</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/gifstyles.css">
 </head>
 <body>
+	<nav class="navbar navbar-default bg-secondary navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="nav navbar-brand" href="#">John Blackwell</a>
+	    </div>
 
-<!-- 	Navbar -->
-	<div class="container">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="./index.html">About Me</a></li>
+	        <li><a href="./contact.html">Contact</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="./portfolio.html">Portfolio</a></li>
+	            <li role="separator" class="divider"></li>
+				<li><a href="./project-1.html">Project 1</a></li>
+	            <li><a href="./project-2.html">Project 2</a></li>
+	            <li><a href="./project-3.html">Project 3</a></li>
+	            <li><a href="./project-4.html">Project 4</a></li>
+	            <li><a href="./project-5.html">Project 5</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="https://jayblack388.github.io/Basic-Portfolio/index.html">This site before Bootstrap</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
-	  <a class="navbar-brand text-light" href="./index.html">John Blackwell</a>
+	<div class="container content">
+		<div class="jumbotron bg-cadet">
+			<h1 class="text-center">Giphy API Project</h1>
+		</div>
+		<div class="row">
 
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+							<h3 class="panel-title text-center">Search Buttons</h3>
+						</div>	
 
-	    <span class="navbar-toggler-icon"></span>
+					<div class="panel-body">
+						<div class="btn-group btn-group-lg">
+							<!-- Rendered Buttons dump here -->
+							<div id="searchBtns"></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">	
+				<div class="panel panel-default">
 
-	  </button>
+					<div class="panel-heading">
+						<h3 class="panel-title text-center">Search Parameters</h3>
+					</div>
 
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="panel-body">
+						<form id="searchForm" role="form">
 
-	    <ul class="navbar-nav ml-auto">
+							<div class="row">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-8 form-group">
+									<label for='searchInput'>Add a new Search Button</label>
+									<input type="text" id="searchInput">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+							
+							<div class="row">	
+								<div class="col-sm-6 form-group">	
+									<label for="numRecords"># of Results</label>
+									<select class="form-control" id="numRecords">
+										<option value="5">5</option>
+										<option value="10">10</option>
+										<option value="25">25</option>
+									</select>
+								</div>
 
-	      <li class="nav-item active">
+								<div class="col-sm-6 form-group">	
+									<label for="numRecords">Rating</label>
+									<select class="form-control" id="ratingRecord">
+										<option value="null">All</option>
+										<option value="y">Y</option>
+										<option value="g">G</option>
+										<option value="pg">PG</option>
+										<option value="pg-13">PG-13</option>
+										<option value="r">R</option>
+									</select>
+								</div>
+							</div>
+								
+							<input type="submit" value="Add a Gif" id="addGif">
 
-	        <a class="nav-link text-light" href="./index.html">About Me<span class="sr-only">(current)</span></a>
+						</form>
+					</div>
 
-	      </li>
+				</div>
+			</div>	
+		</div>
 
-	      <li class="nav-item">
-
-	        <a class="nav-link text-light" href="./contact.html">Contact</a>
-
-	      </li>
-
-	  	   <li class="nav-item dropdown">
-
-	        <a class="nav-link dropdown-toggle text-light" href="./portfolio.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects
-	        </a>
-
-	        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-			  <a class="dropdown-item text-secondary" href="./portfolio.html">Portfolio</a>
-
-	          <div class="dropdown-divider"></div>	
-
-	          <a class="dropdown-item text-secondary" href="./project-1.html">Project 1</a>
-
-	          <a class="dropdown-item text-secondary" href="./project-2.html">Project 2</a>
-
-	          <a class="dropdown-item text-secondary" href="./project-3.html">Project 3</a>
-	          
-	          <a class="dropdown-item text-secondary" href="./project-4.html">Project 4</a>
-
-	          <a class="dropdown-item text-secondary" href="./project-5.html">Project 5</a>
-
-	          <div class="dropdown-divider"></div>
-
-	          <a class="dropdown-item text-secondary" href="https://jayblack388.github.io/Basic-Portfolio/index.html">This site before Bootstrap</a>
-
-	        </div>
-
-	      </li>
-
-	    </ul>
-
-	  </div>
-
-		</nav>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title text-center">Gif Results Returned Below</h3>
+					</div>
+					<div class="panel-body">
+						<div id="gifView"></div>
+					</div>
+				</div>
+			</div>	
+		</div>	
 	</div>
+
+
+
 	
-
-	<div class="container-fluid bg-secondary text-center" style="padding:20px">
-		<footer class="footer">
-			<span class="text-light text-weight-bold">John Blackwell &#169 2017</span>
-		</footer>
-	</div>	
-
-
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
 	<!-- Bootstrap jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<!-- Popper.js (for Bootstrap) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<!-- Javascript plugins (for Bootstrap) -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script 
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<!-- logic sheet -->
+	<script src="../assets/javascript/gifjavascript.js"></script>
 </body>
 </html>
