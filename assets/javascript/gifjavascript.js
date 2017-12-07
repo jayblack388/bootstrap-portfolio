@@ -1,5 +1,5 @@
 let baseURL = "https://api.giphy.com/v1/gifs/search?api_key=YGMklTUgJhQ6vVLRc99pHErqIfYY6Ouw"
-let gifSearches = ["Silly Cats", "Silly Dogs", "Bob Ross", "Make it rain"];
+let gifSearches = ["Cats Falling Down", "Bob Ross", "Make It Rain", "Ridiculous Dogs"];
 let numResults = 0;
 let ratingResult;
 
